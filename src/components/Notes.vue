@@ -21,6 +21,7 @@ const closeNoteForm = () => {
   addNoteFormVisibility.value = false
   noteTitle.value = ''
   noteText.value = ''
+  errorText.value.show = false
 }
 const openNoteForm = () => {
   addNoteFormVisibility.value = true
@@ -85,56 +86,16 @@ const deleteNote = (noteId: number) => {
           </label>
 
           <div class="form__bottom">
+            <Transition name="transform" mode="out-in">
+              <div class="additional _errors" v-if="errorText.show">
+                <p class="_small">{{errorText.text}}</p>
+              </div>
+            </Transition>
+
             <p class="main-btn send-btn" @click="addNote">Добавить</p>
           </div>
-
-          <Transition name="transform" mode="out-in">
-            <div class="additional _errors" v-if="errorText.show">
-              <p class="_small">{{errorText.text}}</p>
-            </div>
-          </Transition>
         </template>
       </Form>
-
-<!--      <Transition name="signup">-->
-<!--        <div class="form__container addNote__form" v-show="addNoteFormVisibility">-->
-<!--          <div class="shadow" @click="closeNoteForm"></div>-->
-
-<!--          <div class="form__window">-->
-<!--            <span @click="closeNoteForm" class="main-btn _close"><img src="@/assets/images/close.svg" alt="close-icon"></span>-->
-
-<!--            <h2 class="h2">Добавление заметки</h2>-->
-
-<!--            <form class="form form__note">-->
-<!--              <label class="form__row _small">-->
-<!--                <span class="input__title">Название заметки</span>-->
-<!--                <input type="text" name="noteTitle"-->
-<!--                       v-model="noteTitle" autocomplete="off" placeholder="Введите название">-->
-<!--                <span class="count _small">{{noteTitle.length}}/64</span>-->
-<!--              </label>-->
-
-<!--              <label class="form__row _small">-->
-<!--                <span class="input__title">Текст заметки</span>-->
-
-<!--                <textarea type="text" name="noteText"-->
-<!--                          v-model="noteText" autocomplete="off" placeholder="Введите текст"></textarea>-->
-
-<!--                <span class="count _small">{{noteText.length}}/255</span>-->
-<!--              </label>-->
-
-<!--              <div class="form__bottom">-->
-<!--                <p class="main-btn send-btn" @click="addNote">Добавить</p>-->
-<!--              </div>-->
-
-<!--              <Transition name="transform" mode="out-in">-->
-<!--                <div class="additional _errors" v-if="errorText.show">-->
-<!--                  <p class="_small">{{errorText.text}}</p>-->
-<!--                </div>-->
-<!--              </Transition>-->
-<!--            </form>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </Transition>-->
 
       <picture class="add-note main-btn" @click="openNoteForm">
         <img src="@/assets/images/add.svg" alt="add-note-icon">
@@ -157,6 +118,12 @@ const deleteNote = (noteId: number) => {
 }
 .addNote__form {
   z-index: 3;
+}
+.addNote__form .additional {
+  width: 100%;
+}
+.addNote__form .additional p {
+  text-align: center;
 }
 
 .add-note {

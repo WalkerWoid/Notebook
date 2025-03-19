@@ -91,51 +91,6 @@ const auth = () => {
       </Transition>
     </template>
   </Form>
-<!--  <div class="form__container">-->
-<!--    <div class="shadow" @click="closeWindow"></div>-->
-
-<!--    <div class="form__window">-->
-<!--      <span @click="closeWindow" class="main-btn _close"><img src="@/assets/images/close.svg" alt="close-icon"></span>-->
-
-<!--      <h2 class="h2">Вход в ваш аккаунт</h2>-->
-
-<!--      <form class="form">-->
-<!--        <label class="form__row _small">-->
-<!--          <span class="input__title">Email</span>-->
-<!--          <input type="email" name="email"-->
-<!--                 v-model="email" autocomplete="off" placeholder="Введите значение">-->
-<!--        </label>-->
-
-<!--        <label class="form__row _small">-->
-<!--          <span class="input__title">Пароль</span>-->
-<!--          <input type="password" name="password" ref="passwordRef"-->
-<!--                 v-model="password" autocomplete="off" placeholder="Введите пароль">-->
-<!--          <span class="_eye" @click="useChangeInputVisibility(passwordInput)">-->
-<!--            <img src="@/assets/images/off-password.svg" alt="eye-icon">-->
-<!--          </span>-->
-<!--        </label>-->
-
-<!--        <div class="form__bottom">-->
-<!--          <p>-->
-<!--            <span class="_gray">У вас нет аккаунта?</span>-->
-<!--            <span class="change-btn _small" @click="$emit('changeFormType', 'registration')">Зарегистрируйтесь</span>-->
-<!--          </p>-->
-
-<!--          <p class="main-btn send-btn" @click="auth">Войти</p>-->
-<!--        </div>-->
-
-<!--        <Transition name="transform" mode="out-in">-->
-<!--          <div class="additional _errors" v-if="errorMessage && errorMessage !== 'success'">-->
-<!--            <p class="_small">{{errorMessage}}</p>-->
-<!--          </div>-->
-
-<!--          <div class="additional _success" v-else-if="isAuth">-->
-<!--            <p class="_small">Вы успешно авторизовались</p>-->
-<!--          </div>-->
-<!--        </Transition>-->
-<!--      </form>-->
-<!--    </div>-->
-<!--  </div>-->
 </template>
 
 <style></style>
