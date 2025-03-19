@@ -1,0 +1,115 @@
+@import "fonts.css";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+html, body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    min-height: 100vh;
+    scrollbar-gutter: stable;
+    letter-spacing: 0;
+    color: var(--white-color);
+}
+:root {
+    --dark-color: rgba(10, 31, 56, 1);
+    --dark-middle-color: rgba(27, 47, 70, 1);
+    --dark-light-color: rgba(47, 64, 86, 1);
+    --gray-color: rgba(157, 165, 175, 1);
+
+    --green-dark-color: rgba(129, 148, 0, 1);
+    --green-middle-color: rgba(151, 171, 13, 1);
+    --green-color: rgba(165, 187, 12, 1);
+    --green-light-color: rgba(177, 201, 9, 1);
+
+    --white-color: rgba(255, 255, 255, 1);
+    --radius: 32px;
+    --round: 50%;
+    --transition: .4s;
+}
+html {
+    background-color: var(--dark-color);
+    overflow-x: hidden;
+}
+body {
+    display: flex;
+}
+main, #app {
+    flex: 1 1 auto;
+    display: flex;
+}
+#app {
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1279px) {
+    main {
+        align-items: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    html, body {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+
+@media screen and (min-width: 1023px) {
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: var(--dark-color);
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(27,47,70);
+        border-radius: 12px;
+    }
+}
+button {
+    font-family: inherit;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+picture {
+    display: flex;
+}
+picture:not(.map__picture) img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+a, span, p, li, h1, h2, h3, h4, h5, h6, input, textarea {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: 0;
+    text-wrap: balance;
+}
+input, textarea {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+input:focus,
+textarea:focus {
+    border: none;
+    outline: 2px solid var(--green-light-color);
+}

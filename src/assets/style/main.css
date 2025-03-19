@@ -1,0 +1,110 @@
+@import "reset.css";
+
+.container {
+    max-width: 1720px;
+    padding: 0 80px;
+    width: 100%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1280px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+.h1 {
+    font-weight: 900;
+    font-size: 104px;
+    line-height: 104px;
+}
+.h2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 72px;
+}
+.h3 {
+    font-size: 32px;
+    line-height: 48px;
+}
+.h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+._small {
+    font-size: 18px;
+    line-height: 28px;
+}
+._bold {
+    font-weight: 700;
+}
+._green {
+    color: var(--green-light-color)
+}
+._gray {
+    color: var(--gray-color)
+}
+._pointer {
+    cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+    .h1 {
+        font-size: 60px;
+        line-height: 64px;
+    }
+    .h2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    .h3 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+.main-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    background-color: var(--green-light-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+.main-btn picture {
+    width: 32px;
+}
+
+._close {
+    padding: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+._close img {
+    width: 16px;
+}
+
+input, textarea {
+    padding: 23px 28px;
+    font-size: 18px;
+    line-height: 28px;
+    border-radius: 36px;
+}
+input::placeholder, textarea::placeholder {
+    color: var(--gray-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+textarea {
+    resize: none;
+    height: 244px;
+    width: 100%;
+    max-width: 100%;
+}
